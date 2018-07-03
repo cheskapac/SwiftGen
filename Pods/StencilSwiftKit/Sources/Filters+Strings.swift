@@ -75,7 +75,7 @@ extension Filters.Strings {
   /// e.g. "People picker" gives "people picker", "Sports Stats" gives "sports Stats"
   static func lowerFirstLetter(_ value: Any?) throws -> Any? {
     let string = try Filters.parseString(from: value)
-    let first = String(string.prefix(1)).lowercased()
+    let first = String(string.prefix(1)).capitalized
     let other = String(string.dropFirst(1))
     return first + other
   }
